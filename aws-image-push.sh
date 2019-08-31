@@ -4,7 +4,7 @@ ECS_REGION='us-east-1'
 
 # Name of the ECR
 
-ECR_NAME1='bot_nodejs'
+ECR_NAME1='skil_dsl_nodejs'
 
 docker build -t $ECR_NAME1 .
 

@@ -85,7 +85,7 @@ app.get('/ping', function (req, res) {
 	 res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,contenttype'); // If needed
 	 res.setHeader('Access-Control-Allow-Credentials', true);*/
 	res.json({
-		staus: 'Chatito server is running in ' + process.env.node_env + " at ->" +
+		staus: 'Skil-dsl server is running in ' + process.env.node_env + " at ->" +
 			moment().format("dddd, MMMM Do YYYY, h:mm:ss a"), message: ':-) (Y) (6)'
 	});
 });
