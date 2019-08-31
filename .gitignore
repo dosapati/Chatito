@@ -19,3 +19,4 @@ node_modules
 !/public/site.webmanifest
 skil_dsl_tmp
 .idea/*
+tmp/*
