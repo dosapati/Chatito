@@ -1,9 +1,10 @@
 import { WriteStream } from 'fs';
-import * as Tokenizer from 'wink-tokenizer';
+//import * as Tokenizer from 'wink-tokenizer';
 import * as gen from '../main';
 import { ISentenceTokens } from '../types';
+var tokenizer1 = require( 'wink-tokenizer' );
 
-const tokenizer = new Tokenizer();
+const tokenizer = new tokenizer1();
 
 export interface IDefaultDataset {
     [intent: string]: ISentenceTokens[][];
@@ -33,16 +34,19 @@ export async function streamAdapter(dsl: string, ws: IFlairWriteStreams, imp?: g
         utterance.forEach(v => {
             const wordTokens = tokenizer.tokenize(v.value);
             if (v.type === 'Slot') {
-                wordTokens.forEach((wt, idx) => {
+                wordTokens.forEach((wt:any, idx:any) => {
                     const slotBorI = idx === 0 ? 'B' : 'I';
                     const slotTag = v.slot!.toLocaleUpperCase().replace(/\s+/g, '');
                     writeStreamNER.write(`${wt.value} ${slotBorI}-${slotTag}` + '\n');
                 });
             } else {
-                wordTokens.forEach(wt => writeStreamNER.write(`${wt.value} O` + '\n'));
+                wordTokens.forEach((wt:any) => writeStreamNER.write(`${wt.value} O` + '\n'));
             }
         });
         writeStreamNER.write('\n'); // always write an extra EOL at the end of sentences
+			return{
+
+			}
     };
     await gen.datasetFromString(dsl, utteranceWriter, imp, currPath);
 }
