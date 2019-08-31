@@ -1,6 +1,6 @@
 {
   "name": "chatito",
-  "version": "2.3.4",
+  "version": "1.0",
   "description": "Generate training datasets for NLU chatbots using a simple DSL",
   "bin": {
     "chatito": "./dist/bin.js"
@@ -53,6 +53,7 @@
   "dependencies": {
     "@types/compression": "^1.0.1",
     "@types/express-session": "^1.15.14",
+    "@types/mongodb": "^3.3.1",
     "async": "^3.0.1",
     "bcrypt-nodejs": "^0.0.3",
     "bluebird": "^3.5.5",

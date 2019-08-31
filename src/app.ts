@@ -12,7 +12,7 @@ import path from "path";
 import * as builder from './bin';
 
 const fileUpload = require('express-fileupload');
-const fs = require('fs');
+const filesystem = require('fs');
 
 
 // Create Express server
@@ -20,8 +20,8 @@ const app = express();
 
 let skil_dsl_tmp_dir = __dirname + '/skil_dsl_tmp/';
 
-if (!fs.existsSync(skil_dsl_tmp_dir)){
-	fs.mkdirSync(skil_dsl_tmp_dir);
+if (!filesystem.existsSync(skil_dsl_tmp_dir)){
+	filesystem.mkdirSync(skil_dsl_tmp_dir);
 }
 
 // Express configuration
@@ -51,11 +51,11 @@ app.use((req, res, next) => {
 app.post("/generate-intents-using-skil-dsl", async function(req:Request,res:Response){
 	//console.log(req.files.skil_dsl_input_file);
 	let uniqueId = new mongodb.ObjectId().toString();
-	let skil_dsl_input_file = req.files.skil_dsl_input_file;
+	let skil_dsl_input_file = req['files'].skil_dsl_input_file;
 
 	let interaction_file_location = skil_dsl_tmp_dir+uniqueId;
-	if (!fs.existsSync(interaction_file_location)){
-		fs.mkdirSync(interaction_file_location);
+	if (!filesystem.existsSync(interaction_file_location)){
+		filesystem.mkdirSync(interaction_file_location);
 	}
 	let dsl_file_location = interaction_file_location+'/' + uniqueId + '.chatito';
 	skil_dsl_input_file.mv(dsl_file_location , async function(err) {
