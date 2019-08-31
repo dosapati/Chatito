@@ -48,17 +48,17 @@ app.use((req, res, next) => {
  * Primary app routes.
  */
 
-app.post("/generate-intents-using-skil-dsl", async function(req:Request,res:Response){
+app.post("/generate-intents-using-skil-dsl", async function(req:any,res:Response){
 	//console.log(req.files.skil_dsl_input_file);
 	let uniqueId = new mongodb.ObjectId().toString();
-	let skil_dsl_input_file = req['files'].skil_dsl_input_file;
+	let skil_dsl_input_file = req.files.skil_dsl_input_file;
 
 	let interaction_file_location = skil_dsl_tmp_dir+uniqueId;
 	if (!filesystem.existsSync(interaction_file_location)){
 		filesystem.mkdirSync(interaction_file_location);
 	}
 	let dsl_file_location = interaction_file_location+'/' + uniqueId + '.chatito';
-	skil_dsl_input_file.mv(dsl_file_location , async function(err) {
+	skil_dsl_input_file.mv(dsl_file_location , async function(err:any) {
 		let outputPath = 'datasets/find_restaurants1/';
 		const any_error = await builder.handleFileGeneration(dsl_file_location,'rasa',outputPath);
 		if(any_error){
