@@ -20,3 +20,4 @@ node_modules
 skil_dsl_tmp
 .idea/*
 tmp/*
+*.iml
