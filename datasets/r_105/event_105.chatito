@@ -1,0 +1,277 @@
+
+# Ways to request a restaurant within a location (using probability operator)
+# NOTE: 60% of the examples should come from the first sentence, and 40% from the second
+
+%[ask_event]('training': '100', 'testing': '100')
+    *[60%] ~[hi?] ~[please?] ~[find?] ~[restaurants] ~[located at] @[event_entity1] ~[city?] ~[thanks?]
+    *[40%] ~[restaurants] ~[located at] @[event_entity1]
+    *[40%] @[event_entity1]
+
+
+~[food]('synonym': 'true')
+    meals
+    eat
+    food
+    delicious
+    drinks
+    drink
+    meal
+    bread
+    meat
+    restaurants
+    places to eat
+    where to eat
+
+
+~[direction]('synonym': 'true')
+    directions
+    direction
+    map
+    location
+    place
+    get to
+    where
+    quickest way to get to
+    best way to get to
+    How do I get to
+    where is
+    how long it
+    how far
+    near to
+    near
+    closet to
+    closet
+    quickest way
+    airport
+    train
+    bus
+
+
+~[coupon]('synonym': 'true')
+    coupon
+    coupon code
+    discount
+    deals
+    deal
+    discounts
+
+~[pass]('synonym': 'true')
+    passes
+    pass
+    tickets
+    ticket
+
+~[startup]('synonym': 'true')
+    startup
+    startupcube
+    startups
+
+~[speaker]('synonym': 'true')
+    speaker
+    speakers
+
+~[schedule]('synonym': 'true')
+    schedule
+    agenda
+    timeline
+    schedule
+
+~[programs]('synonym': 'true')
+    programs
+    shows
+    events
+
+~[register]('synonym': 'true')
+    register
+    signup
+
+~[event_time]('synonym': 'true')
+    when is the event time
+    when event
+    times
+    time
+    dates
+    on which date
+    date
+
+~[sponsorship]('synonym': 'true')
+    sponsorship
+    sponsorships
+    sponsor
+    sponsors
+    promoters
+    promote
+    advertisement
+    ads
+    ad
+    partners
+    partner
+
+@[event_entity1]('entity': 'ask_type')
+    ~[pass]
+    ~[coupon]
+    ~[direction]
+    ~[food]
+    ~[startup]
+    ~[speaker]
+    ~[schedule]
+    ~[programs]
+    ~[register]
+    ~[sponsorship]
+    ~[event_time]
+
+
+
+@[event_name]
+    *[80%] ~[event_name1]
+    ITServe event
+
+~[event_name1]
+    synergy
+    ITServe Synergy
+    itserve
+    Itserve
+
+~[find]
+    find
+    i'm looking for
+    help me find
+
+~[located at]
+    located at
+    in the area of
+    near
+
+~[restaurants]
+    restaurants
+    places to eat
+    where to eat
+
+
+
+
+~[hi]
+    hi
+    hello
+    hey
+
+~[please]
+    please
+    plz
+    pls
+
+~[thanks]
+    thanks
+    thank you
+
+%[bye]('training': '50', 'testing': '50')
+    *[20%] ~[bye]
+    ~[thanks?] ~[bye]
+    ~[bye] ~[thanks?]
+    ~[leaving]
+    ~[leaving] ~[bye]
+
+~[bye]
+    bye
+    goodbye
+    ttyl
+    gtg
+    adios
+    farewell
+    adieu
+    chao
+    chau
+
+~[leaving]
+    leaving
+    talk to you soon
+    have to go
+    got to go
+    talk to you later
+    heading out
+    im leaving now
+    going out
+
+%[negative]('training': '50', 'testing': '50')
+    *[20%] ~[no]
+    ~[no] ~[please?] ~[its not ok?]
+    ~[please?] ~[no] ~[its not ok?]
+    *[20%] ~[its not ok]
+
+~[no]
+    no
+    nope
+    not really
+    that's not right
+    incorrect
+    don't do that
+
+~[its not ok]
+    i don't want that
+    didnt meant that
+    dont mean that
+    that's not what i want
+    that's not correct
+    that's wrong
+    it's not good
+    that is wrong
+    its not ok
+    its not correct
+
+%[affirmative]('training': '50', 'testing': '50')
+    *[20%] ~[yes]
+    ~[yes] ~[please?]
+    ~[yes] ~[yes?] ~[thanks?]
+    ~[yes?] ~[that is good] ~[yes?]
+
+~[yes]
+    yes
+    right
+    affirmative
+    agreed
+    correct
+    yep
+    yes sir
+    sounds good
+    im ok with that
+
+~[that is good]
+    that is good
+    i want that
+    that is fine
+    that is correct
+    that is what i want
+    you understood me
+    that is right
+    its fine
+    good
+
+%[greet]('training': '50', 'testing': '50')
+    *[20%] ~[hi]
+    ~[greetings]
+    ~[hi] ~[greetings?]
+    ~[hi] ~[whats up]
+    ~[greetings] ~[whats up]
+    ~[hi] ~[greetings] ~[whats up]
+
+~[greetings]
+    greetings
+    good morning
+    good afternoon
+    good day
+    good night
+    morning
+
+~[whats up]
+    how are you
+    whats up
+    how are you doing
+    how is it going
+    are you there
+    how are things going
+    are you around
+    whatsup
+    sup
+    are you around?
+
+
