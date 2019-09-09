@@ -3,9 +3,35 @@
 # NOTE: 60% of the examples should come from the first sentence, and 40% from the second
 
 %[ask_event]('training': '100', 'testing': '100')
-    *[60%] ~[hi?] ~[please?] ~[find?] ~[restaurants] ~[located at] @[event_entity1] ~[city?] ~[thanks?]
-    *[40%] ~[restaurants] ~[located at] @[event_entity1]
-    *[40%] @[event_entity1]
+    *[15%] ~[hi?] ~[please?] ~[find?] @[event_entity1] at @[event_name] ~[thanks?]
+    *[15%] ~[find?] @[event_entity1] at @[event_name]
+    *[20%] ~[find] @[event_entity1] at @[event_name]
+    *[20%] ~[enquire] @[event_entity1] at @[event_name]
+    *[20%] @[event_entity1]
+
+
+%[what_is]('training': '100', 'testing': '100')
+*[10%] what is @[event_name]
+
+
+~[enquire]('synonym': 'true')
+    *[60%] tell me about
+    significance of
+    Why should I
+    tell me
+    can you
+    do you know
+
+
+~[how_many]('synonym': 'true')
+    total
+    no of people
+    count
+    estimation of people
+    estimated people
+    population
+    expected strength
+    strength
 
 
 ~[food]('synonym': 'true')
@@ -45,6 +71,8 @@
     airport
     train
     bus
+    place
+    shortest distance
 
 
 ~[coupon]('synonym': 'true')
@@ -93,6 +121,11 @@
     dates
     on which date
     date
+    held
+    going to start
+    going to end
+    start
+    end
 
 ~[sponsorship]('synonym': 'true')
     sponsorship
@@ -119,6 +152,7 @@
     ~[register]
     ~[sponsorship]
     ~[event_time]
+    ~[how_many]
 
 
 
