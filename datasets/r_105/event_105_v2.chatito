@@ -1,0 +1,502 @@
+
+# Ways to enquire about an event (using probability operator)
+# NOTE: distribution of all combinations.....
+
+
+%[ask_model_version]('training': '2', 'testing': '2')
+    agent version
+    bot version
+
+%[ask_passes]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[passes] at @[event_name] ~[thanks?]
+    *[40%] @[passes]
+    *[35%] ~[enquire] @[passes] 
+    ~[enquire] @[passes] at @[event_name]
+
+%[ask_coupon]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[coupon] at @[event_name] ~[thanks?]
+    *[40%] @[coupon]
+    *[35%] ~[enquire] @[coupon] 
+    ~[enquire] @[coupon] at @[event_name]
+
+%[ask_direction]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[direction] at @[event_name] ~[thanks?]
+    *[40%] @[direction]
+    *[35%] ~[enquire] @[direction] 
+    ~[enquire] @[direction] at @[event_name]
+
+%[ask_food]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[food] at @[event_name] ~[thanks?]
+    *[40%] @[food]
+    *[35%] ~[enquire] @[food] 
+    ~[enquire] @[food] at @[event_name]
+
+%[ask_startup]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[startup] at @[event_name] ~[thanks?]
+    *[40%] @[startup]
+    *[35%] ~[enquire] @[startup] 
+    ~[enquire] @[startup] at @[event_name]
+
+%[ask_speaker]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[speaker] at @[event_name] ~[thanks?]
+    *[40%] @[speaker]
+    *[35%] ~[enquire] @[speaker] 
+    ~[enquire] @[speaker] at @[event_name]
+
+%[ask_programs]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[programs] at @[event_name] ~[thanks?]
+    *[40%] @[programs]
+    *[35%] ~[enquire] @[programs] 
+    ~[enquire] @[programs] at @[event_name]
+
+%[ask_register]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[register] at @[event_name] ~[thanks?]
+    *[40%] @[register]
+    *[35%] ~[enquire] @[register] 
+    ~[enquire] @[register] at @[event_name]
+
+%[ask_sponsorship]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[sponsorship] at @[event_name] ~[thanks?]
+    *[40%] @[sponsorship]
+    *[35%] ~[enquire] @[sponsorship] 
+    ~[enquire] @[sponsorship] at @[event_name]
+
+%[ask_event_time]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[event_time] at @[event_name] ~[thanks?]
+    *[40%] @[event_time]
+    *[35%] ~[enquire] @[event_time] 
+    ~[enquire] @[event_time] at @[event_name]
+
+%[ask_how_many]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[how_many] at @[event_name] ~[thanks?]
+    *[40%] @[how_many]
+    *[35%] ~[enquire] @[how_many] 
+    ~[enquire] @[how_many] at @[event_name]
+
+%[ask_contact]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[contact] at @[event_name] ~[thanks?]
+    *[40%] @[contact]
+    *[35%] ~[enquire] @[contact] 
+    ~[enquire] @[contact] at @[event_name]
+
+%[ask_hotel]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[hotel] at @[event_name] ~[thanks?]
+    *[40%] @[hotel]
+    *[35%] ~[enquire] @[hotel] 
+    ~[enquire] @[hotel] at @[event_name]
+
+%[ask_booth_cost]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[booth_cost] at @[event_name] ~[thanks?]
+    *[40%] @[booth_cost]
+    *[35%] ~[enquire] @[booth_cost] 
+    ~[enquire] @[booth_cost] at @[event_name]
+
+
+
+~[bot_name]('synonym': 'true')
+    *[60%] Lisa
+    *[20%] bot
+    VA
+    Agent
+    Virtual Assistant
+
+~[enquire]('synonym': 'true')
+    *[20%] tell me about
+    significance of
+    Why should I
+    tell me
+    can you
+    do you know
+    tell us
+    suggest us
+    let me know
+    looking for
+    may I know
+    help me with
+    can you say
+    can i know
+    how to
+    can you tell, how to
+    find
+    i'm looking for
+    help me find
+
+
+~[how_many_slot_synonyms]('synonym': 'true')
+    total
+    no of people
+    count
+    estimation of people
+    estimated people
+    population
+    expected strength
+    strength
+
+
+~[food_slot_synonyms]('synonym': 'true')
+    meals
+    eat
+    food
+    delicious
+    drinks
+    drink
+    meal
+    bread
+    meat
+    restaurants
+    places to eat
+    where to eat
+
+
+~[direction_slot_synonyms]('synonym': 'true')
+    directions
+    direction
+    map
+    location
+    place
+    get to
+    where
+    quickest way to get to
+    best way to get to
+    How do I get to
+    where is
+    how long it
+    how far
+    near to
+    near
+    closet to
+    closet
+    quickest way
+    airport
+    train
+    bus
+    place
+    shortest distance
+
+
+~[coupon_slot_synonyms]('synonym': 'true')
+    coupon
+    coupon code
+    discount
+    deals
+    deal
+    discounts
+
+~[passes_slot_synonyms]('synonym': 'true')
+    passes
+    pass
+    tickets
+    ticket
+    entry pass
+    entry ticket
+
+~[startup_slot_synonyms]('synonym': 'true')
+    startup
+    startupcube
+    startups
+
+~[speaker_slot_synonyms]('synonym': 'true')
+    speaker
+    speakers
+    presenters
+
+~[schedule_slot_synonyms]('synonym': 'true')
+    schedule
+    agenda
+    timeline
+    schedule
+
+~[programs_slot_synonyms]('synonym': 'true')
+    programs
+    shows
+    events
+
+~[register_slot_synonyms]('synonym': 'true')
+    register
+    signup
+    process
+    join
+
+~[event_time_slot_synonyms]('synonym': 'true')
+    when is the event time
+    when event
+    times
+    time
+    dates
+    on which date
+    date
+    held
+    going to start
+    going to end
+    start
+    end
+    when
+
+~[contact_slot_synonyms]('synonym': 'true')
+    contact
+    reach out
+    need help
+    help
+    mobile number
+    more details
+
+~[hotel_slot_synonyms]('synonym': 'true')
+    nearest hotel
+    hotel
+    places to stay
+    stay
+    sleep
+    near by hotel
+    near hotel
+
+
+~[sponsorship_slot_synonyms]('synonym': 'true')
+    sponsorship
+    sponsorships
+    sponsor
+    sponsors
+    promoters
+    promote
+    advertisement
+    ads
+    ad
+    partners
+    partner
+
+~[booth_cost_slot_synonyms]('synonym': 'true')
+    price
+    cost
+    fixed price
+    total cost
+    minimum price
+    best price
+
+
+~[what_is_slot_synonyms]('synonym': 'true')
+    *[75%] what is
+    what 
+
+@[what_is]
+    ~[what_is_slot_synonyms]
+
+%[ask_what_is]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[what_is] at @[event_name] ~[thanks?]
+    *[50%] @[what_is] @[event_name]
+    ~[enquire] @[what_is] @[event_name]
+
+~[why_should_slot_synonyms]('synonym': 'true')
+    why
+    *[25%] why should
+    why should i
+    why should we
+
+@[why_should]
+    ~[why_should_slot_synonyms]
+
+%[ask_why_should]('training': '500', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[why_should] at @[event_name] ~[thanks?]
+    *[50%] @[why_should] @[event_name]
+    ~[enquire] @[why_should] @[event_name]
+
+
+@[coupon]
+    ~[coupon_slot_synonyms]
+
+@[passes]
+    ~[passes_slot_synonyms]
+
+@[direction]
+    ~[direction_slot_synonyms]
+
+@[food]
+    ~[food_slot_synonyms]
+
+@[startup]
+    ~[startup_slot_synonyms]
+
+@[speaker]
+    ~[speaker_slot_synonyms]
+
+@[schedule]
+    ~[schedule_slot_synonyms]
+
+@[programs]
+    ~[programs_slot_synonyms]
+
+@[register]
+    ~[register_slot_synonyms]
+
+@[sponsorship]
+    ~[sponsorship_slot_synonyms]
+
+@[event_time]
+    ~[event_time_slot_synonyms]
+
+@[how_many]
+    ~[how_many_slot_synonyms]
+
+@[contact]
+    ~[contact_slot_synonyms]
+
+@[hotel]
+    ~[hotel_slot_synonyms]
+
+@[booth_cost]
+    ~[booth_cost_slot_synonyms]
+
+
+
+
+@[event_name]
+    ~[event_name1]
+
+~[event_name1]('synonym': 'true')
+    synergy
+    ITServe Synergy
+    itserve
+    Itserve
+    ITServe event
+
+~[find]
+    find
+    i'm looking for
+    help me find
+
+~[located at]
+    located at
+    in the area of
+    near
+
+~[restaurants]
+    restaurants
+    places to eat
+    where to eat
+
+
+
+
+~[hi]
+    hi
+    hello
+    hey
+
+~[please]
+    please
+    plz
+    pls
+
+~[thanks]
+    thanks
+    thank you
+    thank
+
+%[bye]('training': '50', 'testing': '50')
+    *[20%] ~[bye]
+    ~[thanks?] ~[bye]
+    ~[bye] ~[thanks?]
+    ~[leaving]
+    ~[leaving] ~[bye]
+
+~[bye]
+    bye
+    goodbye
+    ttyl
+    gtg
+    adios
+    farewell
+    adieu
+    chao
+    chau
+
+~[leaving]
+    leaving
+    talk to you soon
+    have to go
+    got to go
+    talk to you later
+    heading out
+    im leaving now
+    going out
+
+%[negative]('training': '50', 'testing': '50')
+    *[20%] ~[no]
+    ~[no] ~[please?] ~[its not ok?]
+    ~[please?] ~[no] ~[its not ok?]
+    *[20%] ~[its not ok]
+
+~[no]
+    no
+    nope
+    not really
+    that's not right
+    incorrect
+    don't do that
+
+~[its not ok]
+    i don't want that
+    didnt meant that
+    dont mean that
+    that's not what i want
+    that's not correct
+    that's wrong
+    it's not good
+    that is wrong
+    its not ok
+    its not correct
+
+%[affirmative]('training': '50', 'testing': '50')
+    *[20%] ~[yes]
+    ~[yes] ~[please?]
+    ~[yes] ~[yes?] ~[thanks?]
+    ~[yes?] ~[that is good] ~[yes?]
+
+~[yes]
+    yes
+    right
+    affirmative
+    agreed
+    correct
+    yep
+    yes sir
+    sounds good
+    im ok with that
+
+~[that is good]
+    that is good
+    i want that
+    that is fine
+    that is correct
+    that is what i want
+    you understood me
+    that is right
+    its fine
+    good
+
+%[greet]('training': '200', 'testing': '50')
+    *[30%] ~[hi]
+    ~[greetings]
+    ~[hi] ~[greetings?]
+    ~[hi] ~[whats up]
+    ~[greetings] ~[whats up]
+    ~[hi] ~[greetings] ~[whats up]
+
+~[greetings]
+    greetings
+    good morning
+    good afternoon
+    good day
+    good night
+    morning
+
+~[whats up]
+    how are you
+    whats up
+    how are you doing
+    how is it going
+    are you there
+    how are things going
+    are you around
+    whatsup
+    sup
+    are you around?
+

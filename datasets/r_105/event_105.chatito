@@ -2,25 +2,37 @@
 # Ways to request a restaurant within a location (using probability operator)
 # NOTE: 60% of the examples should come from the first sentence, and 40% from the second
 
-%[ask_event]('training': '100', 'testing': '100')
-    *[15%] ~[hi?] ~[please?] ~[find?] @[event_entity1] at @[event_name] ~[thanks?]
-    *[15%] ~[find?] @[event_entity1] at @[event_name]
-    *[20%] ~[find] @[event_entity1] at @[event_name]
-    *[20%] ~[enquire] @[event_entity1] at @[event_name]
+%[ask_event]('training': '5000', 'testing': '1000')
+    *[10%] ~[hi?] ~[bot_name] ~[please?] ~[find?] @[event_entity1] at @[event_name] ~[thanks?]
+    *[10%] ~[find?] @[event_entity1] @[event_name]
+    *[30%] ~[enquire] @[event_entity1]  @[event_name]
+    *[30%] ~[enquire] @[event_entity1]
     *[20%] @[event_entity1]
 
-
-%[what_is]('training': '100', 'testing': '100')
-*[10%] what is @[event_name]
-
+~[bot_name]('synonym': 'true')
+    *[60%] Lisa
+    *[20%] bot
+    VA
+    Agent
+    Virtual Assistant
 
 ~[enquire]('synonym': 'true')
-    *[60%] tell me about
+    *[20%] tell me about
     significance of
     Why should I
     tell me
     can you
     do you know
+    tell us
+    suggest us
+    let me know
+    looking for
+    may I know
+    help me with
+    can you say
+    can i know
+    how to
+    can you tell, how to
 
 
 ~[how_many]('synonym': 'true')
@@ -88,6 +100,8 @@
     pass
     tickets
     ticket
+    entry pass
+    entry ticket
 
 ~[startup]('synonym': 'true')
     startup
@@ -97,6 +111,7 @@
 ~[speaker]('synonym': 'true')
     speaker
     speakers
+    presenters
 
 ~[schedule]('synonym': 'true')
     schedule
@@ -112,6 +127,8 @@
 ~[register]('synonym': 'true')
     register
     signup
+    process
+    join
 
 ~[event_time]('synonym': 'true')
     when is the event time
@@ -126,6 +143,25 @@
     going to end
     start
     end
+    when
+
+~[contact]('synonym': 'true')
+    contact
+    reach out
+    need help
+    help
+    mobile number
+    more details
+
+~[hotel]('synonym': 'true')
+    nearest hotel
+    hotel
+    places to stay
+    stay
+    sleep
+    near by hotel
+    near hotel
+
 
 ~[sponsorship]('synonym': 'true')
     sponsorship
@@ -140,6 +176,14 @@
     partners
     partner
 
+~[booth_cost]('synonym': 'true')
+    price
+    cost
+    fixed price
+    total cost
+    minimum price
+    best price
+
 @[event_entity1]('entity': 'ask_type')
     ~[pass]
     ~[coupon]
@@ -153,6 +197,9 @@
     ~[sponsorship]
     ~[event_time]
     ~[how_many]
+    ~[contact]
+    ~[hotel]
+    ~[booth_cost]
 
 
 
@@ -197,6 +244,7 @@
 ~[thanks]
     thanks
     thank you
+    thank
 
 %[bye]('training': '50', 'testing': '50')
     *[20%] ~[bye]
@@ -280,8 +328,8 @@
     its fine
     good
 
-%[greet]('training': '50', 'testing': '50')
-    *[20%] ~[hi]
+%[greet]('training': '200', 'testing': '50')
+    *[30%] ~[hi]
     ~[greetings]
     ~[hi] ~[greetings?]
     ~[hi] ~[whats up]
