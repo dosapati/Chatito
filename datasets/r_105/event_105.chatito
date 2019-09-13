@@ -73,8 +73,6 @@
     best way to get to
     How do I get to
     where is
-    how long it
-    how far
     near to
     near
     closet to
@@ -152,6 +150,9 @@
     help
     mobile number
     more details
+    phone number
+    call
+    talk to
 
 ~[hotel]('synonym': 'true')
     nearest hotel
@@ -168,6 +169,7 @@
     sponsorships
     sponsor
     sponsors
+    sponsor's
     promoters
     promote
     advertisement
@@ -183,6 +185,32 @@
     total cost
     minimum price
     best price
+
+~[what_is]('synonym': 'true')
+    *[45%] what is
+    what
+    what's 
+
+~[why_should]('synonym': 'true')
+    why
+    *[25%] why should
+    why should i
+    why should we
+
+~[how_long]('synonym': 'true')
+    how long it
+    how far
+    how long
+    distance
+
+~[parking]('synonym': 'true')
+    park
+    parking
+    free parking
+    park the car
+    underground car parking
+    parking lot
+    park vehicle
 
 @[event_entity1]('entity': 'ask_type')
     ~[pass]
@@ -200,6 +228,10 @@
     ~[contact]
     ~[hotel]
     ~[booth_cost]
+    ~[hotel]
+    ~[what_is]
+    ~[why_should]
+    ~[how_long]
 
 
 
@@ -347,6 +379,7 @@
 ~[whats up]
     how are you
     whats up
+    what's up
     how are you doing
     how is it going
     are you there
@@ -355,5 +388,6 @@
     whatsup
     sup
     are you around?
+    what's
 
 

@@ -7,90 +7,83 @@
     agent version
     bot version
 
-%[ask_passes]('training': '500', 'testing': '100')
+%[ask_passes]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[passes] at @[event_name] ~[thanks?]
     *[40%] @[passes]
     *[35%] ~[enquire] @[passes] 
     ~[enquire] @[passes] at @[event_name]
 
-%[ask_coupon]('training': '500', 'testing': '100')
+%[ask_coupon]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[coupon] at @[event_name] ~[thanks?]
     *[40%] @[coupon]
     *[35%] ~[enquire] @[coupon] 
     ~[enquire] @[coupon] at @[event_name]
 
-%[ask_direction]('training': '500', 'testing': '100')
+%[ask_direction]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[direction] at @[event_name] ~[thanks?]
     *[40%] @[direction]
     *[35%] ~[enquire] @[direction] 
     ~[enquire] @[direction] at @[event_name]
 
-%[ask_food]('training': '500', 'testing': '100')
+%[ask_food]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[food] at @[event_name] ~[thanks?]
     *[40%] @[food]
     *[35%] ~[enquire] @[food] 
     ~[enquire] @[food] at @[event_name]
 
-%[ask_startup]('training': '500', 'testing': '100')
+%[ask_startup]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[startup] at @[event_name] ~[thanks?]
     *[40%] @[startup]
     *[35%] ~[enquire] @[startup] 
     ~[enquire] @[startup] at @[event_name]
 
-%[ask_speaker]('training': '500', 'testing': '100')
+%[ask_speaker]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[speaker] at @[event_name] ~[thanks?]
     *[40%] @[speaker]
     *[35%] ~[enquire] @[speaker] 
     ~[enquire] @[speaker] at @[event_name]
 
-%[ask_programs]('training': '500', 'testing': '100')
+%[ask_programs]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[programs] at @[event_name] ~[thanks?]
     *[40%] @[programs]
     *[35%] ~[enquire] @[programs] 
     ~[enquire] @[programs] at @[event_name]
 
-%[ask_register]('training': '500', 'testing': '100')
+%[ask_register]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[register] at @[event_name] ~[thanks?]
     *[40%] @[register]
     *[35%] ~[enquire] @[register] 
     ~[enquire] @[register] at @[event_name]
 
-%[ask_sponsorship]('training': '500', 'testing': '100')
+%[ask_sponsorship]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[sponsorship] at @[event_name] ~[thanks?]
     *[40%] @[sponsorship]
     *[35%] ~[enquire] @[sponsorship] 
     ~[enquire] @[sponsorship] at @[event_name]
 
-%[ask_event_time]('training': '500', 'testing': '100')
+%[ask_event_time]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[event_time] at @[event_name] ~[thanks?]
     *[40%] @[event_time]
     *[35%] ~[enquire] @[event_time] 
     ~[enquire] @[event_time] at @[event_name]
 
-%[ask_how_many]('training': '500', 'testing': '100')
+%[ask_how_many]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[how_many] at @[event_name] ~[thanks?]
     *[40%] @[how_many]
     *[35%] ~[enquire] @[how_many] 
     ~[enquire] @[how_many] at @[event_name]
 
-%[ask_contact]('training': '500', 'testing': '100')
+%[ask_contact]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[contact] at @[event_name] ~[thanks?]
     *[40%] @[contact]
     *[35%] ~[enquire] @[contact] 
     ~[enquire] @[contact] at @[event_name]
 
-%[ask_hotel]('training': '500', 'testing': '100')
+%[ask_hotel]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[hotel] at @[event_name] ~[thanks?]
     *[40%] @[hotel]
     *[35%] ~[enquire] @[hotel] 
     ~[enquire] @[hotel] at @[event_name]
-
-%[ask_booth_cost]('training': '500', 'testing': '100')
-    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[booth_cost] at @[event_name] ~[thanks?]
-    *[40%] @[booth_cost]
-    *[35%] ~[enquire] @[booth_cost] 
-    ~[enquire] @[booth_cost] at @[event_name]
-
 
 
 ~[bot_name]('synonym': 'true')
@@ -147,6 +140,15 @@
     places to eat
     where to eat
 
+~[airport_slot_synonyms]('synonym': 'true')
+    airport
+    fly to
+    air station 
+    drome
+    airdrome
+    air terminal
+    terminal
+    aiport
 
 ~[direction_slot_synonyms]('synonym': 'true')
     directions
@@ -160,14 +162,11 @@
     best way to get to
     How do I get to
     where is
-    how long it
-    how far
     near to
     near
     closet to
     closet
     quickest way
-    airport
     train
     bus
     place
@@ -263,13 +262,6 @@
     partners
     partner
 
-~[booth_cost_slot_synonyms]('synonym': 'true')
-    price
-    cost
-    fixed price
-    total cost
-    minimum price
-    best price
 
 
 ~[what_is_slot_synonyms]('synonym': 'true')
@@ -279,7 +271,7 @@
 @[what_is]
     ~[what_is_slot_synonyms]
 
-%[ask_what_is]('training': '500', 'testing': '100')
+%[ask_what_is]('training': '200', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[what_is] at @[event_name] ~[thanks?]
     *[50%] @[what_is] @[event_name]
     ~[enquire] @[what_is] @[event_name]
@@ -293,11 +285,106 @@
 @[why_should]
     ~[why_should_slot_synonyms]
 
-%[ask_why_should]('training': '500', 'testing': '100')
+%[ask_why_should]('training': '100', 'testing': '100')
     *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[why_should] at @[event_name] ~[thanks?]
     *[50%] @[why_should] @[event_name]
     ~[enquire] @[why_should] @[event_name]
 
+~[how_long_slot_synonyms]('synonym': 'true')
+    how long it
+    how far
+    how long
+    distance
+
+@[how_long]
+    ~[how_long_slot_synonyms]
+
+%[ask_how_long]('training': '100', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[how_long] at @[event_name] ~[thanks?]
+    *[50%] @[how_long] from @[airport] @[event_name?]
+    ~[enquire] @[how_long] @[event_name?]
+    @[how_long]
+
+~[parking_slot_synonyms]('synonym': 'true')
+    park
+    parking
+    free parking
+    park the car
+    underground car parking
+    parking lot
+    park vehicle
+
+@[parking]
+    ~[parking_slot_synonyms]
+
+%[ask_parking]('training': '100', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[parking] at @[event_name] ~[thanks?]
+    *[30%] @[parking] @[event_name?]
+    ~[enquire] @[parking] @[event_name?]
+    @[parking]
+
+~[booth_cost_slot_synonyms]('synonym': 'true')
+    booth cost
+    booth price
+    booth rent
+    cost
+    price
+    keeping booth
+    fixed price
+    total cost
+    minimum price
+    best price
+
+@[booth_cost]
+    ~[booth_cost_slot_synonyms]
+
+%[ask_booth_cost]('training': '100', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[booth_cost] at @[event_name] ~[thanks?]
+    @[booth_cost]  @[event_name?]
+    *[35%] ~[enquire] @[booth_cost] @[event_name?]
+    @[booth_cost]
+
+~[buy_tickets_slot_synonyms]('synonym': 'true')
+    buy tickets
+    buy
+    purchase tickets
+    purchase
+    pay money
+    process to purchase
+    process to buy
+
+@[buy_tickets]
+    ~[buy_tickets_slot_synonyms]
+
+%[ask_buy_tickets]('training': '100', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[buy_tickets] at @[event_name] ~[thanks?]
+    @[buy_tickets]  @[event_name?]
+    *[35%] ~[enquire] @[buy_tickets] @[event_name?]
+    @[buy_tickets]
+
+~[what_people_slot_synonyms]('synonym': 'true')
+    people
+    people attending
+    kind of people
+    attending
+
+
+@[what_people]
+    ~[what_people_slot_synonyms]
+
+%[ask_what_people]('training': '100', 'testing': '100')
+    *[5%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[what_people] at @[event_name] ~[thanks?]
+    *[50%] @[what_people] @[event_name?]
+    ~[enquire] @[what_people] @[event_name?]
+    @[what_people]
+
+%[ask_airport]('training': '100', 'testing': '100')
+    *[20%] ~[hi?] ~[bot_name] ~[please?] ~[enquire?] @[airport] at @[event_name] ~[thanks?]
+    ~[enquire] @[airport] @[event_name]
+    @[airport]
+
+@[airport]
+    ~[airport_slot_synonyms]
 
 @[coupon]
     ~[coupon_slot_synonyms]
@@ -341,8 +428,6 @@
 @[hotel]
     ~[hotel_slot_synonyms]
 
-@[booth_cost]
-    ~[booth_cost_slot_synonyms]
 
 
 
@@ -356,6 +441,7 @@
     itserve
     Itserve
     ITServe event
+    Venue
 
 ~[find]
     find
