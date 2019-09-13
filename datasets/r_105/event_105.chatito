@@ -5,9 +5,10 @@
 %[ask_event]('training': '5000', 'testing': '1000')
     *[10%] ~[hi?] ~[bot_name] ~[please?] ~[find?] @[event_entity1] at @[event_name] ~[thanks?]
     *[10%] ~[find?] @[event_entity1] @[event_name]
-    *[30%] ~[enquire] @[event_entity1]  @[event_name]
-    *[30%] ~[enquire] @[event_entity1]
+    ~[enquire] @[event_entity1]  @[event_name]
+    ~[enquire] @[event_entity1]
     *[20%] @[event_entity1]
+    *[15%] @[event_entity1] ~[please]
 
 ~[bot_name]('synonym': 'true')
     *[60%] Lisa
@@ -35,7 +36,7 @@
     can you tell, how to
 
 
-~[how_many]('synonym': 'true')
+~[sny_how_many]('synonym': 'true')
     total
     no of people
     count
@@ -44,9 +45,10 @@
     population
     expected strength
     strength
+    population of
 
 
-~[food]('synonym': 'true')
+~[sny_food]('synonym': 'true')
     meals
     eat
     food
@@ -61,7 +63,7 @@
     where to eat
 
 
-~[direction]('synonym': 'true')
+~[sny_direction]('synonym': 'true')
     directions
     direction
     map
@@ -78,14 +80,13 @@
     closet to
     closet
     quickest way
-    airport
     train
     bus
     place
     shortest distance
 
 
-~[coupon]('synonym': 'true')
+~[sny_coupon]('synonym': 'true')
     coupon
     coupon code
     discount
@@ -93,42 +94,44 @@
     deal
     discounts
 
-~[pass]('synonym': 'true')
+~[sny_pass]('synonym': 'true')
     passes
     pass
     tickets
     ticket
     entry pass
     entry ticket
+    entry ticket fee
+    ticket fee
 
-~[startup]('synonym': 'true')
+~[sny_startup]('synonym': 'true')
     startup
     startupcube
     startups
 
-~[speaker]('synonym': 'true')
+~[sny_speaker]('synonym': 'true')
     speaker
     speakers
     presenters
 
-~[schedule]('synonym': 'true')
+~[sny_schedule]('synonym': 'true')
     schedule
     agenda
     timeline
     schedule
 
-~[programs]('synonym': 'true')
+~[sny_programs]('synonym': 'true')
     programs
     shows
     events
 
-~[register]('synonym': 'true')
+~[sny_register]('synonym': 'true')
     register
     signup
     process
     join
 
-~[event_time]('synonym': 'true')
+~[sny_event_time]('synonym': 'true')
     when is the event time
     when event
     times
@@ -143,7 +146,7 @@
     end
     when
 
-~[contact]('synonym': 'true')
+~[sny_contact]('synonym': 'true')
     contact
     reach out
     need help
@@ -154,7 +157,7 @@
     call
     talk to
 
-~[hotel]('synonym': 'true')
+~[sny_hotel]('synonym': 'true')
     nearest hotel
     hotel
     places to stay
@@ -164,7 +167,7 @@
     near hotel
 
 
-~[sponsorship]('synonym': 'true')
+~[sny_sponsorship]('synonym': 'true')
     sponsorship
     sponsorships
     sponsor
@@ -178,7 +181,7 @@
     partners
     partner
 
-~[booth_cost]('synonym': 'true')
+~[sny_booth_cost]('synonym': 'true')
     price
     cost
     fixed price
@@ -186,24 +189,24 @@
     minimum price
     best price
 
-~[what_is]('synonym': 'true')
+~[sny_what_is]('synonym': 'true')
     *[45%] what is
     what
     what's 
 
-~[why_should]('synonym': 'true')
+~[sny_why_should]('synonym': 'true')
     why
     *[25%] why should
     why should i
     why should we
 
-~[how_long]('synonym': 'true')
+~[sny_how_long]('synonym': 'true')
     how long it
     how far
     how long
     distance
 
-~[parking]('synonym': 'true')
+~[sny_parking]('synonym': 'true')
     park
     parking
     free parking
@@ -212,26 +215,37 @@
     parking lot
     park vehicle
 
+~[sny_airport]('synonym': 'true')
+    airport
+    fly to
+    air station 
+    drome
+    airdrome
+    air terminal
+    terminal
+    aiport
+
 @[event_entity1]('entity': 'ask_type')
-    ~[pass]
-    ~[coupon]
-    ~[direction]
-    ~[food]
-    ~[startup]
-    ~[speaker]
-    ~[schedule]
-    ~[programs]
-    ~[register]
-    ~[sponsorship]
-    ~[event_time]
-    ~[how_many]
-    ~[contact]
-    ~[hotel]
-    ~[booth_cost]
-    ~[hotel]
-    ~[what_is]
-    ~[why_should]
-    ~[how_long]
+    ~[sny_pass]
+    ~[sny_coupon]
+    ~[sny_direction]
+    ~[sny_food]
+    ~[sny_startup]
+    ~[sny_speaker]
+    ~[sny_schedule]
+    ~[sny_programs]
+    ~[sny_register]
+    ~[sny_sponsorship]
+    ~[sny_event_time]
+    ~[sny_how_many]
+    ~[sny_contact]
+    ~[sny_hotel]
+    ~[sny_booth_cost]
+    ~[sny_hotel]
+    ~[sny_what_is]
+    ~[sny_why_should]
+    ~[sny_how_long]
+    ~[sny_airport]
 
 
 
