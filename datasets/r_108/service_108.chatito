@@ -1,0 +1,421 @@
+
+# Ways to request a restaurant within a location (using probability operator)
+# NOTE: 60% of the examples should come from the first sentence, and 40% from the second
+
+%[ask_event]('training': '5000', 'testing': '1000')
+    *[10%] ~[hi?] ~[bot_name] ~[please?] ~[find?] @[service_entity1] at @[service_name] ~[thanks?]
+    *[10%] ~[find?] @[service_entity1] @[service_name]
+    ~[enquire] @[service_entity1]  @[service_name]
+    ~[enquire] @[service_entity1]
+    *[20%] @[service_entity1]
+    *[15%] @[service_entity1] ~[please]
+
+~[bot_name]('synonym': 'true')
+    *[60%] Lisa
+    *[20%] bot
+    VA
+    Agent
+    Virtual Assistant
+
+~[enquire]('synonym': 'true')
+    *[20%] tell me about
+    significance of
+    Why should I
+    tell me
+    can you
+    do you know
+    tell us
+    suggest us
+    let me know
+    looking for
+    may I know
+    help me with
+    can you say
+    can i know
+    how to
+    can you tell, how to
+
+
+~[sny_how_many]('synonym': 'true')
+    total
+    no of people
+    count
+    estimation of people
+    estimated people
+    population
+    expected strength
+    strength
+    population of
+
+
+~[sny_food]('synonym': 'true')
+    meals
+    eat
+    food
+    delicious
+    drinks
+    drink
+    meal
+    bread
+    meat
+    restaurants
+    places to eat
+    where to eat
+
+
+~[sny_direction]('synonym': 'true')
+    directions
+    direction
+    map
+    location
+    place
+    get to
+    where
+    quickest way to get to
+    best way to get to
+    How do I get to
+    where is
+    near to
+    near
+    closet to
+    closet
+    quickest way
+    train
+    bus
+    place
+    shortest distance
+
+~[sny_issue]('synonym': 'true')
+    haven't
+    have not
+    didn't
+    did not
+    issue
+    problem
+    not
+    missing
+    hadn't
+    never
+    
+
+~[sny_coupon]('synonym': 'true')
+    coupon
+    coupon code
+    discount
+    deals
+    deal
+    discounts
+    concession
+
+~[sny_pass]('synonym': 'true')
+    passes
+    pass
+    tickets
+    ticket
+    entry pass
+    entry ticket
+    entry ticket fee
+    ticket fee
+
+~[sny_startup]('synonym': 'true')
+    startup
+    startupcube
+    startups
+
+~[sny_speaker]('synonym': 'true')
+    speaker
+    speakers
+    presenters
+
+~[sny_schedule]('synonym': 'true')
+    schedule
+    agenda
+    timeline
+    schedule
+
+~[sny_programs]('synonym': 'true')
+    programs
+    shows
+    events
+
+~[sny_register]('synonym': 'true')
+    register
+    signup
+    process
+    join
+
+~[sny_event_time]('synonym': 'true')
+    when is the event time
+    when event
+    times
+    time
+    dates
+    on which date
+    date
+    held
+    going to start
+    going to end
+    start
+    end
+    when
+
+~[sny_contact]('synonym': 'true')
+    contact
+    reach out
+    need help
+    help
+    mobile number
+    more details
+    phone number
+    call
+    talk to
+
+~[sny_hotel]('synonym': 'true')
+    nearest hotel
+    hotel
+    places to stay
+    stay
+    sleep
+    near by hotel
+    near hotel
+
+
+~[sny_sponsorship]('synonym': 'true')
+    sponsorship
+    sponsorships
+    sponsor
+    sponsors
+    sponsor's
+    promoters
+    promote
+    advertisement
+    ads
+    ad
+    partners
+    partner
+
+~[sny_booth_cost]('synonym': 'true')
+    price
+    cost
+    fixed price
+    total cost
+    minimum price
+    best price
+
+~[sny_what_is]('synonym': 'true')
+    *[45%] what is
+    what
+    what's 
+
+~[sny_why_should]('synonym': 'true')
+    why
+    *[25%] why should
+    why should i
+    why should we
+
+~[sny_how_long]('synonym': 'true')
+    how long it
+    how far
+    how long
+    distance
+
+~[sny_parking]('synonym': 'true')
+    park
+    parking
+    free parking
+    park the car
+    underground car parking
+    parking lot
+    park vehicle
+
+~[sny_airport]('synonym': 'true')
+    airport
+    fly to
+    air station 
+    drome
+    airdrome
+    air terminal
+    terminal
+    aiport
+
+@[service_entity1]('entity': 'ask_type')
+    ~[sny_pass]
+    ~[sny_coupon]
+    ~[sny_direction]
+    ~[sny_food]
+    ~[sny_startup]
+    ~[sny_speaker]
+    ~[sny_schedule]
+    ~[sny_programs]
+    ~[sny_register]
+    ~[sny_sponsorship]
+    ~[sny_event_time]
+    ~[sny_how_many]
+    ~[sny_contact]
+    ~[sny_hotel]
+    ~[sny_booth_cost]
+    ~[sny_hotel]
+    ~[sny_what_is]
+    ~[sny_why_should]
+    ~[sny_how_long]
+    ~[sny_airport]
+    ~[sny_issue]
+
+
+
+@[service_name]
+    *[80%] ~[service_name1]
+    ITServe event
+
+~[service_name1]
+    synergy
+    ITServe Synergy
+    itserve
+    Itserve
+
+~[find]
+    find
+    i'm looking for
+    help me find
+
+~[located at]
+    located at
+    in the area of
+    near
+
+~[restaurants]
+    restaurants
+    places to eat
+    where to eat
+
+
+
+
+~[hi]
+    hi
+    hello
+    hey
+
+~[please]
+    please
+    plz
+    pls
+
+~[thanks]
+    thanks
+    thank you
+    thank
+
+%[bye]('training': '50', 'testing': '50')
+    *[20%] ~[bye]
+    ~[thanks?] ~[bye]
+    ~[bye] ~[thanks?]
+    ~[leaving]
+    ~[leaving] ~[bye]
+
+~[bye]
+    bye
+    goodbye
+    ttyl
+    gtg
+    adios
+    farewell
+    adieu
+    chao
+    chau
+
+~[leaving]
+    leaving
+    talk to you soon
+    have to go
+    got to go
+    talk to you later
+    heading out
+    im leaving now
+    going out
+
+%[negative]('training': '50', 'testing': '50')
+    *[20%] ~[no]
+    ~[no] ~[please?] ~[its not ok?]
+    ~[please?] ~[no] ~[its not ok?]
+    *[20%] ~[its not ok]
+
+~[no]
+    no
+    nope
+    not really
+    that's not right
+    incorrect
+    don't do that
+
+~[its not ok]
+    i don't want that
+    didnt meant that
+    dont mean that
+    that's not what i want
+    that's not correct
+    that's wrong
+    it's not good
+    that is wrong
+    its not ok
+    its not correct
+
+%[affirmative]('training': '50', 'testing': '50')
+    *[20%] ~[yes]
+    ~[yes] ~[please?]
+    ~[yes] ~[yes?] ~[thanks?]
+    ~[yes?] ~[that is good] ~[yes?]
+
+~[yes]
+    yes
+    right
+    affirmative
+    agreed
+    correct
+    yep
+    yes sir
+    sounds good
+    im ok with that
+
+~[that is good]
+    that is good
+    i want that
+    that is fine
+    that is correct
+    that is what i want
+    you understood me
+    that is right
+    its fine
+    good
+
+%[greet]('training': '200', 'testing': '50')
+    *[30%] ~[hi]
+    ~[greetings]
+    ~[hi] ~[greetings?]
+    ~[hi] ~[whats up]
+    ~[greetings] ~[whats up]
+    ~[hi] ~[greetings] ~[whats up]
+
+~[greetings]
+    greetings
+    good morning
+    good afternoon
+    good day
+    good night
+    morning
+
+~[whats up]
+    how are you
+    whats up
+    what's up
+    how are you doing
+    how is it going
+    are you there
+    how are things going
+    are you around
+    whatsup
+    sup
+    are you around?
+    what's
+
+
