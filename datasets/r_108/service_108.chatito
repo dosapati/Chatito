@@ -96,7 +96,6 @@
     missing
     hadn't
     never
-    
 
 ~[sny_coupon]('synonym': 'true')
     coupon
@@ -238,40 +237,45 @@
     terminal
     aiport
 
-@[service_entity1]('entity': 'ask_type')
-    ~[sny_pass]
-    ~[sny_coupon]
-    ~[sny_direction]
-    ~[sny_food]
-    ~[sny_startup]
-    ~[sny_speaker]
-    ~[sny_schedule]
-    ~[sny_programs]
-    ~[sny_register]
-    ~[sny_sponsorship]
-    ~[sny_event_time]
-    ~[sny_how_many]
-    ~[sny_contact]
-    ~[sny_hotel]
-    ~[sny_booth_cost]
-    ~[sny_hotel]
-    ~[sny_what_is]
-    ~[sny_why_should]
-    ~[sny_how_long]
-    ~[sny_airport]
-    ~[sny_issue]
+~[sny_features]('synonym': 'true')
+    features
+    feature
+    attributes
+    attribute
 
+~[sny_has_access]('synonym': 'true')
+    whether I have access
+    do i have access
+    whether have access
+    do have access
+    check access
+
+~[sny_kind_of_access]('synonym': 'true')
+    kind of access
+    kind access
+    type of access
+    types of access
+
+~[sny_gain_access]('synonym': 'true')
+    gain access
+    request access
+    gain
+    request
+
+@[service_entity1]('entity': 'ask_type')
+    ~[sny_what_is]
+    ~[sny_features]
+    ~[sny_has_access]
+    ~[sny_kind_of_access]
+    ~[sny_gain_access]
 
 
 @[service_name]
-    *[80%] ~[service_name1]
-    ITServe event
+    *[70%] ~[service_name1]
+    mailbox
 
 ~[service_name1]
-    synergy
-    ITServe Synergy
-    itserve
-    Itserve
+    shared mailbox
 
 ~[find]
     find
@@ -417,5 +421,4 @@
     sup
     are you around?
     what's
-
 
