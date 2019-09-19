@@ -34,6 +34,9 @@
     can i know
     how to
     can you tell, how to
+    is there any
+    any
+    i need help
 
 
 ~[sny_how_many]('synonym': 'true')
@@ -246,6 +249,7 @@
 ~[sny_has_access]('synonym': 'true')
     whether I have access
     do i have access
+    do i access
     whether have access
     do have access
     check access
@@ -262,12 +266,36 @@
     gain
     request
 
+~[sny_storage_limit]('synonym': 'true')
+    storage limit
+    storage limits
+    limits
+    limit
+    maximum limits
+    maximum limit
+
+~[sny_issues]('synonym': 'true')
+    issues
+    issue
+    problems
+    problem
+    having issues
+    have issues
+    have a issue
+    complain
+    need help
+    help me
+    looking for help
+    complaint
+
 @[service_entity1]('entity': 'ask_type')
     ~[sny_what_is]
     ~[sny_features]
     ~[sny_has_access]
     ~[sny_kind_of_access]
     ~[sny_gain_access]
+    ~[sny_storage_limit]
+    ~[sny_issues]
 
 
 @[service_name]
